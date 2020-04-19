@@ -1,0 +1,32 @@
+@import "./header.scss";
+@import "./footer.scss";
+@import "./variables.scss";
+@import "./dark-mode.scss";
+
+body {
+  font-family: "Lexend Giga", sans-serif;
+  background-color: var(--bg-color);
+}
+::selection {
+  background-color: var(--golden);
+  color: var(--bg-color);
+}
+
+.content {
+  height: 60vh;
+  h3.stuff {
+    color: var(--font-color);
+    margin: 3em 0 1em 0;
+  }
+
+  .all-tech {
+    max-width: 30vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .tech {
+      font-size: 70pt;
+      color: var(--golden);
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import './variables.scss';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  flex: 1;
+  width: 100%;
+  border-top: var(--golden) solid 1px;
+
+  display: flex;
+  flex-direction: column;
+
+  .contact {
+    flex: 1;
+  }
+  /* mail me */
+  .mail-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+    a.mail {
+      text-decoration: none;
+      cursor: pointer;
+
+      .holla {
+        font-size: 50px;
+      }
+    }
+
+    .small {
+      flex: 1;
+      color: var(--font-color);
+      font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+
+  .color-link {
+    font-size: calc(48px + 6 * ((100vw - 320px) / 680));
+
+    background: var(--golden);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &.small-link {
+      font-size: 20pt;
+    }
+  }
+
+  div.social {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    
+    a.social-links {
+      padding: 0 2vh 2vh 2vh;
+      font-size: calc(70px + 6 * ((100vw - 320px) / 680));
+      .lni {
+        color: transparent;
+        background: var(--gradient-1);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+  }
+}
+
+/* media queries */
+
+@media only screen and (min-width: 330px) and (orientation: portrait) {
+  .footer {
+    text-align: center;
+    // max-height: 40vh;
+
+    .mail-info {
+      padding: 3vh 0;
+
+      .small {
+        font-size: calc(30px + 6 * ((100vw - 320px) / 680));
+      }
+    }
+
+    .color-link {
+      font-size: calc(60px + 6 * ((100vw - 320px) / 680));
+  
+      &.small-link {
+        font-size: 40pt;
+      }
+    }
+
+    div.social {
+      justify-content: center;
+      padding: 1vh 0;
+
+      a.social-links {
+        // padding-left: 8vw;
+        padding: 0 3vh 3vh 3vh;
+        font-size: calc(80px + 6 * ((100vw - 320px) / 680));
+        .lni {
+          // color: var(--font-color);
+          color: transparent;
+          background: var(--gradient-1);
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+      }
+    }
+  }
+}
+
+/* landscape mobile */
+@media screen and (min-width: 200px) and (max-width: 1000px) and (orientation: landscape) {
+  .footer {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+
+    div.social {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

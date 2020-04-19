@@ -1,0 +1,45 @@
+/* main colors */
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #7066aa;
+  --font-color: #444;
+  --bg-color: #f4f4f7;
+  --heading-color: #444;
+  --gradient-1: linear-gradient(
+    109.6deg,
+    rgba(123, 90, 224, 1) 11.2%,
+    rgba(164, 46, 253, 1) 32.6%,
+    rgba(213, 56, 234, 1) 62.7%,
+    rgba(251, 138, 52, 1) 100.2%
+  );
+  --gradient-3: linear-gradient(270deg, #21D4FD 0%, #B721FF 100%);
+  
+  
+  --golden: #ffa600;
+
+  /* misc colors */
+  --light-grey: #bbbbbb;
+}
+
+/* dark mode configuration */
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #b6c5f0;
+  --font-color: #f8f8f8;
+  --bg-color: #313131;
+  --heading-color: #f4f4f7;
+  --gradient-3: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  --gradient-1: linear-gradient(180deg, #FFDEE9 0%, #B5FFFC 100%);
+  
+  --golden: #ffc400;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
